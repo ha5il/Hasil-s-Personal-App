@@ -11,6 +11,7 @@ export default {
 
 <style>
 .statusbar {
-  height: 20px;
+  height: 30px;
+  marginBottom: 12px;
 }
 </style>
