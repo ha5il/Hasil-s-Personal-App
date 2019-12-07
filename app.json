@@ -1,7 +1,8 @@
 {
   "expo": {
     "name": "Hasil",
-    "slug": "Hasil",
+    "slug": "Hasil-s-Personal-App",
+    "description": "Hasil's Personal App | Coded with Vuejs | Build with expo",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -15,7 +16,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#329bc8"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +24,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "android": {
+      "package": "np.com.hasilpaudyal.hasil"
+    },
     "ios": {
+      "bundleIdentifier": "np.com.hasilpaudyal.hasil",
       "supportsTablet": true
     },
     "packagerOpts": {
@@ -35,6 +40,7 @@
         "tsx",
         "vue"
       ]
-    }
+    },
+    "githubUrl": "https://github.com/ha5il/Hasil-s-Personal-App"
   }
 }
