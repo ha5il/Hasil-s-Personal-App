@@ -16,7 +16,8 @@
     <text class="poem-line">And who is this me</text>
     <text class="poem-line">Links the first letters to me</text>
 
-    <card v-for="(card, idx) in cards" :key="idx" :title="card.title" :content="card.content" />
+    <card v-for="(card, idx) in cards" :key="idx" :title="card.title"
+    :titleIcon="card.titleIcon" :content="card.content" />
   </scroll-view>
 </template>
 
@@ -33,9 +34,11 @@ export default {
       cards: [
         {
           title: 'Who am I?',
+          titleIcon: 'ios-happy',
           content: 'Not always starting from A ends you in Z, sometimes you have to continue with AA and create any word of your own. Though having Graduation of Electrical Engineering I do have skills in Design, Web Development, Electrical repair and Electronics simulation. Out of the box, I write poems, speak quotes and try altering cloud saved data.',
         }, {
           title: 'What I do?',
+          titleIcon: 'ios-briefcase',
           content: 'I develop the backend of website and connect its database to different platforms with api.',
         }
       ]
