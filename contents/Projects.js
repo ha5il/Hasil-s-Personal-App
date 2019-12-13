@@ -1,24 +1,6 @@
-<template>
-  <scroll-view class="container">
-    <StatusBar color="#ac252d" />
+import _ from "lodash";
 
-    <Card v-for="(project, idx) in projects" :key="idx" :title="project.name"
-    :content="project.tagLine" :projectId="project.id" />
-  </scroll-view>
-</template>
-
-<script>
-import StatusBar from "../components/StatusBar";
-import Card from "../components/Card";
-
-export default {
-  components: {
-    StatusBar,
-    Card
-  },
-  data: function() {
-    return {
-      projects: [
+const projects = [
     {
         name: "KTM Retail",
         tagLine: "Vuejs based ecommerce website.",
@@ -529,27 +511,108 @@ export default {
                 }],
         }]
     },
-]
-    };
-  },
- 
-};
-</script>
+];
 
-<style>
-.container {
-  background-color: #fdf7ff;
-  flex: 1;
+export const projectsMixins = {
+    methods: {
+        getAllProjects() {
+            return _.shuffle(projects.map(row => pick(row, [
+                'name', 'tagLine', 'coverImage', 'technologies',
+                'type', 'urlSlug', 'id', 'contributionLevels'
+            ])));
+        },
+        getProjectUrlSlug(projectId) {
+            let returnData = null;
+            projects.forEach(project => {
+                if (project['id'] == projectId) {
+                    returnData = project['urlSlug'];
+                }
+            });
+            return returnData;
+        },
+        getProjectDetails(projectId) {
+            let returnData = null;
+            projects.forEach(project => {
+                if (project['id'] == projectId) {
+                    returnData = project;
+                }
+            });
+            return returnData;
+        },
+        getVariant(type) {
+            switch (type) {
+                case 'Teammates':
+                    return 'secondary';
+                case 'Design':
+                case 'Feature':
+                case 'C/C++':
+                case 'C++':
+                    return 'info';
+                case 'Backend':
+                case 'Marketing':
+                    return 'warning';
+                case 'Frontend':
+                case 'C#':
+                    return 'primary';
+                case 'Security':
+                case 'Hardware':
+                    return 'danger';
+                default:
+                    return 'dark';
+            }
+        },
+        getProjectPageTitle(projectId) {
+            let returnData = 'Project';
+            projects.forEach(project => {
+                if (project['id'] == projectId) {
+                    returnData += " - " + project['name'];
+                    if (project['website']) {
+                        returnData += " | " + project['website'].replace('//', '');
+                    }
+                }
+            });
+            return returnData;
+        },
+        getProjectPageDescription(projectId) {
+            let returnData = null;
+            projects.forEach(project => {
+                if (project['id'] == projectId) {
+                    project['details'].forEach(detail => {
+                        if (detail.paragraphs) {
+                            returnData = detail['paragraphs'][0]['text'];
+                        }
+                    });
+                }
+            });
+            var trimmedString = returnData.substr(0, 158);
+            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+            return trimmedString;
+        },
+        getProjectTechnologies() {
+            let returnData = [];
+            projects.forEach(project => {
+                project['technologies'].forEach(tech => {
+                    let dupliFound = false;
+                    returnData.forEach(dupliCheck => {
+                        if(dupliCheck['tech'] == tech) {
+                            dupliCheck['projCount']++;
+                            dupliFound = true;
+                        }
+                    });
+                    if(!dupliFound) {
+                        returnData.push({
+                            'tech' : tech,
+                            'projCount' : 1,
+                        });
+                    }
+                });
+            });
+            return new Set(returnData);
+        }
+    }
 }
-.cover-image {
-  width: 80%;
-  margin-left: 10%;
-  margin-bottom: 20px;
+
+// returns only selected keys from object
+function pick(obj, keys) {
+    return keys.map(k => k in obj ? { [k]: obj[k] } : {}).reduce((res, o) => Object.assign(res, o), {});
 }
-.poem-line {
-  text-align: center;
-  letter-spacing: 1px;
-  font-size: 20px;
-  color: #6e161c;
-}
-</style>
