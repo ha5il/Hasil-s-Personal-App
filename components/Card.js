@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     title: {
         color: Colors.tintColor,
         fontSize: 30,
-        fontWeight: 500,
+        fontWeight: 'bold',
     },
     titleIcon: {
         fontSize: 28,

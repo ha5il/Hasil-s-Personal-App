@@ -11,6 +11,6 @@ export function StatusBar() {
 const styles = StyleSheet.create({
     statusbar: {
       backgroundColor: Colors.statusBarColor,
-      height: '30px',
+      height: 30,
     },
 });

@@ -62,15 +62,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   coverImage: {
-    width: '300px',
-    height: '200px',
-    marginBottom: '20px',
+    width: 300,
+    height: 200,
+    marginBottom: 20,
     alignSelf: 'center',
   },
   poemLine: {
     textAlign: 'center',
-    letterSpacing: '1px',
-    fontSize: '20px',
+    letterSpacing: 1,
+    fontSize: 20,
     color: Colors.textColor,
   }
 });
