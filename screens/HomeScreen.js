@@ -1,12 +1,9 @@
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import {
   Image,
-  Platform,
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 
@@ -18,9 +15,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <StatusBar />
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+      <ScrollView style={styles.container}>
         <View style={styles.welcomeContainer}>
           <Image
             source={require('../assets/images/Hasil.png')}

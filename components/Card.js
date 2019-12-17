@@ -15,6 +15,23 @@ export function Card(props) {
     );
 }
 
+export function CardPoem(props) {
+    return (
+        <View style={styles.card}>
+            <Text style={styles.title}>
+                {props.title}
+            </Text>
+            {props.paras.map((para =>
+                <View style={styles.poemPara}>
+                    {para.paraLines.map((line =>
+                        <Text style={styles.poemParaLine}>{line}</Text>
+                    ))}
+                </View>
+            ))}
+        </View>
+    );
+}
+
 const styles = StyleSheet.create({
     card: {
         margin: 20,
@@ -36,5 +53,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'justify',
         marginTop: 20,
+    },
+    poemPara: {
+        textAlign: 'center',
+        marginTop: 20,
+    },
+    poemParaLine: {
+        color: Colors.textColor,
+        fontSize: 20,
     }
 });

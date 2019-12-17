@@ -1,16 +1,23 @@
 import React from 'react';
 import {
+  View,
   Text,
   StyleSheet,
-  View
+  ScrollView
 } from 'react-native';
 import { StatusBar } from "../components/StatusBar";
+import Project from "../contents/Projects";
+import { Card } from "../components/Card";
 
-export default function ProjectsScreen() {    
-    return (
-      <View>
+export default function ProjectsScreen() {
+  return (
+    <View style={{ flex: 1 }}>
       <StatusBar />
-      <Text>Projects</Text>
+      <ScrollView style={styles.container}>
+        {Project.projects.map((project =>
+          <Card title={project.name} content={project.tagLine} />
+        ))}
+      </ScrollView>
     </View>
   );
 }
