@@ -28,6 +28,19 @@ export function CardPoem(props) {
                     ))}
                 </View>
             ))}
+            <Text style={styles.poemAuthor}>
+                - Hasil Paudyal
+            </Text>
+        </View>
+    );
+}
+
+export function CardQuote(props) {
+    return (
+        <View style={styles.card}>
+            {props.content.map((line =>
+                <Text style={styles.contentQuote}>{line}</Text>
+            ))}
         </View>
     );
 }
@@ -37,7 +50,7 @@ const styles = StyleSheet.create({
         margin: 20,
         padding: 20,
         backgroundColor: Colors.bodyColorCard,
-        borderRadius: 40,
+        borderRadius: 15,
     },
     title: {
         color: Colors.tintColor,
@@ -54,6 +67,10 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         marginTop: 20,
     },
+    contentQuote: {
+        color: Colors.textColor,
+        fontSize: 20,
+    },
     poemPara: {
         textAlign: 'center',
         marginTop: 20,
@@ -61,5 +78,10 @@ const styles = StyleSheet.create({
     poemParaLine: {
         color: Colors.textColor,
         fontSize: 20,
+    },
+    poemAuthor: {
+        textAlign: "right",
+        fontSize: 15,
+        color: Colors.textColor,
     }
 });

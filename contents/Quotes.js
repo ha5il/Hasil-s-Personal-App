@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 const quotes = [
     {
         id: 1,
@@ -88,65 +86,6 @@ const quotes = [
     },
 ];
 
-export const quotesMixins = {
-    methods: {
-        getAllquotes() {
-            return _.shuffle(quotes.map(row => pick(row, [
-                'id', 'urlSlug', 'quoteLines'
-            ])));
-        },
-        getQuoteUrlSlug(quoteId) {
-            let returnData = null;
-            quotes.forEach(quote => {
-                if (quote['id'] == quoteId) {
-                    returnData = quote['urlSlug'];
-                }
-            });
-            return returnData;
-        },
-        getRandomQuote() {
-            return _.shuffle(quotes)[0];
-        },
-        getQuoteDetails(quoteId) {
-            let returnData = null;
-            quotes.forEach(quote => {
-                if (quote['id'] == quoteId) {
-                    returnData = quote;
-                }
-            });
-            return returnData;
-        },
-        getQuotePageTitle(quoteId) {
-            let returnData = '';
-            quotes.forEach(quote => {
-                if (quote['id'] == quoteId) {
-                    quote.quoteLines.forEach(line => {
-                        returnData += ' '+line;
-                    })
-                }
-            });
-            var trimmedString = returnData.substr(0, 40);
-            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-            return "Quote -" + trimmedString + '...';
-        },
-        getQuotePageDescription(quoteId) {
-            let returnData = null;
-            quotes.forEach(quote => {
-                if (quote['id'] == quoteId) {
-                    returnData = '';
-                    quote['quoteLines'].forEach(line => {
-                            returnData += line + ' ';
-                    });
-                }
-            });
-            var trimmedString = returnData.substr(0, 158);
-            trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-            return trimmedString;
-        }
-    }
-}
-
-// returns only selected keys from object
-function pick(obj, keys) {
-    return keys.map(k => k in obj ? { [k]: obj[k] } : {}).reduce((res, o) => Object.assign(res, o), {});
+export default {
+    quotes
 }

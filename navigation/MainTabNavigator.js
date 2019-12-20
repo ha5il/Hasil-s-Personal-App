@@ -7,6 +7,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import PoemsScreen from '../screens/PoemsScreen';
 import ProjectsScreen from '../screens/ProjectsScreen';
+import QuotesScreen from '../screens/QuotesScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -46,7 +47,7 @@ const PoemsStack = createStackNavigator(
 PoemsStack.navigationOptions = {
   tabBarLabel: 'Poems',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bookmarks' : 'md-book'} />
   ),
 };
 
@@ -62,16 +63,33 @@ const ProjectsStack = createStackNavigator(
 ProjectsStack.navigationOptions = {
   tabBarLabel: 'Projects',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-calendar' : 'md-calendar'} />
   ),
 };
 
 ProjectsStack.path = '';
 
+const QuotesStack = createStackNavigator(
+  {
+    Quotes: QuotesScreen,
+  },
+  config
+);
+
+QuotesStack.navigationOptions = {
+  tabBarLabel: 'Quotes',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-chatbubbles' : 'md-link'} />
+  ),
+};
+
+QuotesStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   PoemsStack,
   ProjectsStack,
+  QuotesStack,
 });
 
 tabNavigator.path = '';

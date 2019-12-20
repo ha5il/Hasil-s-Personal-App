@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginBottom: 20,
     alignSelf: 'center',
+    marginTop: 10,
   },
   poemLine: {
     textAlign: 'center',

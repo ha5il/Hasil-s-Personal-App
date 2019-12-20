@@ -8,6 +8,7 @@ import {
 import { StatusBar } from "../components/StatusBar";
 import Project from "../contents/Projects";
 import { Card } from "../components/Card";
+import Colors from '../constants/Colors';
 
 export default function ProjectsScreen() {
   return (
@@ -31,6 +32,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 15,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.bodyColor,
   },
 });

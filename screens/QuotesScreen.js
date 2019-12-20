@@ -1,29 +1,30 @@
 import React from 'react';
 import {
   View,
-  ScrollView,
+  Text,
   StyleSheet,
+  ScrollView
 } from 'react-native';
 import { StatusBar } from "../components/StatusBar";
-import { CardPoem } from '../components/Card';
-import Poems from '../contents/Poems';
+import Quote from "../contents/Quotes";
+import { CardQuote } from "../components/Card";
 import Colors from '../constants/Colors';
 
-export default function PoemsScreen() {
+export default function QuotesScreen() {
   return (
-    <View style={{flex: 1}}>
-    <StatusBar />
+    <View style={{ flex: 1 }}>
+      <StatusBar />
       <ScrollView style={styles.container}>
-      {Poems.poems.map((poem =>
-        <CardPoem title={poem.name} paras={poem.poemParas} />
+        {Quote.quotes.map((quote =>
+          <CardQuote content={quote.quoteLines} />
         ))}
       </ScrollView>
     </View>
   );
 }
 
-PoemsScreen.navigationOptions = {
-  // title: 'Poems',
+QuotesScreen.navigationOptions = {
+  // title: 'Quotes',
   header: null,
 };
 
@@ -32,5 +33,5 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 15,
     backgroundColor: Colors.bodyColor,
-  }
+  },
 });
