@@ -10,7 +10,7 @@
       "android",
       "web"
     ],
-    "version": "2.1.0",
+    "version": "2.1.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
@@ -27,6 +27,7 @@
     "android": {
       "package": "np.com.hasilpaudyal.hasil"
     },
+    "androidStatusBarColor":  "#ac252d",
     "ios": {
       "bundleIdentifier": "np.com.hasilpaudyal.hasil",
       "supportsTablet": true
