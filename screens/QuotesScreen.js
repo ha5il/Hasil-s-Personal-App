@@ -16,7 +16,7 @@ export default function QuotesScreen() {
       <StatusBar />
       <ScrollView style={styles.container}>
         {Quote.quotes.map((quote =>
-          <CardQuote content={quote.quoteLines} />
+          <CardQuote content={quote.quoteLines} key={quote.id} />
         ))}
       </ScrollView>
     </View>

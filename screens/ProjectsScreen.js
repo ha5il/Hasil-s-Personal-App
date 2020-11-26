@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { StatusBar } from "../components/StatusBar";
 import Project from "../contents/Projects";
-import { Card } from "../components/Card";
+import { CardProject } from "../components/Card";
 import Colors from '../constants/Colors';
 
 export default function ProjectsScreen() {
@@ -15,8 +15,8 @@ export default function ProjectsScreen() {
     <View style={{ flex: 1 }}>
       <StatusBar />
       <ScrollView style={styles.container}>
-        {Project.projects.map((project =>
-          <Card title={project.name} content={project.tagLine} />
+        {Project.projects.reverse().map((project =>
+          <CardProject project={project} key={project.id} />
         ))}
       </ScrollView>
     </View>

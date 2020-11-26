@@ -1,5 +1,5 @@
 import React from 'react';
-import { AsyncStorage, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar as StatusBarImport, StyleSheet, View } from 'react-native';
 import Colors from '../constants/Colors';
 
 export function StatusBar() {
@@ -12,6 +12,6 @@ export function StatusBar() {
 const styles = StyleSheet.create({
     statusbar: {
       backgroundColor: Colors.statusBarColor,
-      height: 30,
+      height: Platform.OS == 'android' ? StatusBarImport.currentHeight : 30,
     },
 });

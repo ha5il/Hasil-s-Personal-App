@@ -15,7 +15,7 @@ export default function PoemsScreen() {
     <StatusBar />
       <ScrollView style={styles.container}>
       {Poems.poems.map((poem =>
-        <CardPoem title={poem.name} paras={poem.poemParas} />
+        <CardPoem title={poem.name} key={poem.id} paras={poem.poemParas} />
         ))}
       </ScrollView>
     </View>

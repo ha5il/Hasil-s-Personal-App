@@ -1,8 +1,10 @@
+import _ from "lodash";
+
 const projects = [
     {
         name: "KTM Retail",
         tagLine: "Vuejs based ecommerce website.",
-        coverImage: "/ktmretail.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fktmretail.JPG?alt=media",
         type: "it",
         urlSlug: "ktmretail-jockey-nepal-vuejs-ecommerce-website",
         id: 1,
@@ -23,32 +25,32 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Products with Multiple sizes with individual prices'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Products Filter API (Laravel Eloquent)'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Middleware Protection for admin and staff accounts'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Banners management'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Web Analytics'
                 }, {
-                    category: 'Marketing',
-                    text: 'Dynamic banners rediection'
+                    badge: 'Marketing',
+                    text: 'Dynamic banners redirection'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Promo Codes and Discount Management'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Order Status/Report management'
                 }],
         }]
@@ -57,7 +59,7 @@ const projects = [
         name: "Intranery",
         tagLine:
             "Ecommerce website for dealers to sell products as done by Daraz.",
-        coverImage: "/intranery.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fintranery.JPG?alt=media",
         type: "it",
         urlSlug: "intranery-nepal-vuejs-ecommerce-website",
         id: 2,
@@ -80,17 +82,17 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'API for Dealers Section'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Middleware Protection for admin and staff accounts'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Web Analytics'
                 }],
         }]
@@ -98,7 +100,7 @@ const projects = [
     {
         name: "Foreveryng",
         tagLine: "Ecommerce website designed for discounts.",
-        coverImage: "/foreveryng.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fforeveryng.JPG?alt=media",
         type: "it",
         urlSlug: "foreveryng-online-beauty-store-nepal",
         id: 3,
@@ -116,54 +118,71 @@ const projects = [
             titleIcon: 'assignment',
             paragraphs: [
                 {
-                    text: 'The project is created to replace the wordpress site crafted with WooCommerce. Since WooCommerce is not targeted to Neplease market we had to built a better platform than that.'
+                    text: 'The project is created to replace the wordpress site crafted with WooCommerce. Since WooCommerce is not targeted to Nepalese market we had to built a better platform than that.'
                 },
                 {
-                    text: 'Foreveryng not only sells products online but also has reward point, gift card and promo management system to boost the marketing. On the oter hand it is also capable to tracking user referrals to provide extra offers and discounts.'
+                    text: 'Foreveryng not only sells products online but also has reward point, gift card and promo management system to boost the marketing. On the other hand it is also capable to tracking user referrals to provide extra offers and discounts.'
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Backend',
+                    badge: 'Backend',
                     text: 'Product Management with multiple size, colour and different prices'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Product Feedback'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'API'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Middleware Protection for admin and staff accounts'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Web Analytics'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Discounts and offers management'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Gift Card and Promo Code'
                 }, {
-                    category: 'Optimization',
+                    badge: 'Optimization',
                     text: 'Database Relations and Laravel Eloquent'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Shipment tracking and Reward Points as per order item status'
+                }],
+        }, {
+            title: 'Team',
+            titleIcon: 'people',
+            lists:
+                [{
+                    badge: 3,
+                    text: 'UI/UX'
+                }, {
+                    badge: 2,
+                    text: 'Backend'
+                }, {
+                    badge: 2,
+                    text: 'Android'
+                }, {
+                    badge: 1,
+                    text: 'IOS'
                 }],
         }]
     },
     {
         name: "Kourtier Courier",
-        tagLine: "Webapp for kourier tracking management.",
-        coverImage: "/kourtier.jpg",
+        tagLine: "Webapp for courier tracking management.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fkourtier.JPG?alt=media",
         type: "it",
         urlSlug: "kourtier-courier-services-cargo-freight",
         id: 4,
-        website: '//kourtier.com.np',
+        website: '//kourtiercourier.com.np',
         technologies: ['Laravel', 'jQuery'],
         contributionLevels: {
             Design: 2,
@@ -175,15 +194,15 @@ const projects = [
             titleIcon: 'assignment',
             paragraphs: [
                 {
-                    text: 'Kourtier Couriers Pvt. Ltd. was established in 1997 by Mr. Pawan Kishore Rathi with a group of professionals who have over a decade of experience in their respective field. Today, Kourtier is the leading and the largest network courier service provider in Nepal covering self-network of more than 130 service stations around Nepal with strong ad well set-up delivery structure in Kathmandu valley. The Company is running with an advanced and scientific management using world class technology and having quality manpower. Kourtier has come up with fresh team and technology to address your customised requirements and by virtue of more than decade and half long experience, we are aware of the type and sensitivity of consignment; process of delivery; standard POD requirements and delivery time schedule structure. Kourtier has the required infrastructure, manpower, expertise and technology to do such activities smoothly.'
+                    text: 'Kourtier Couriers Pvt. Ltd. was established in 1997 by Mr. Pawan Kishore Rathi with a group of professionals who have over a decade of experience in their respective field. Today, Kourtier is the leading and the largest network courier service provider in Nepal covering self-network of more than 130 service stations around Nepal with strong ad well set-up delivery structure in Kathmandu valley. The Company is running with an advanced and scientific management using world class technology and having quality manpower. Kourtier has come up with fresh team and technology to address your customized requirements and by virtue of more than decade and half long experience, we are aware of the type and sensitivity of consignment; process of delivery; standard POD requirements and delivery time schedule structure. Kourtier has the required infrastructure, manpower, expertise and technology to do such activities smoothly.'
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Optimization',
+                    badge: 'Optimization',
                     text: 'Shifted Admin Report section to Laravel Eloquent'
                 }],
         }]
@@ -191,7 +210,7 @@ const projects = [
     {
         name: "Mero Pharmacist",
         tagLine: "Pharmacy enquiries online.",
-        coverImage: "/meropharmacist.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fmeropharmacist.JPG?alt=media",
         type: "it",
         urlSlug: "mero-pharmacist-pharma-srs-online-enquire",
         id: 5,
@@ -210,14 +229,14 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Frontend',
+                    badge: 'Frontend',
                     text: 'Social login'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Blog share feature'
                 }],
         }]
@@ -225,9 +244,9 @@ const projects = [
     {
         name: "TIA",
         tagLine: "Tribhuvan International airport.",
-        coverImage: "/tia.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Ftia.JPG?alt=media",
         type: "it",
-        urlSlug: "tribhuvan-international-airport-filght-tracking-nepal",
+        urlSlug: "tribhuvan-international-airport-flight-tracking-nepal",
         id: 6,
         website: '//tiairport.com.np',
         technologies: ['October CMS'],
@@ -244,14 +263,14 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Backend',
+                    badge: 'Backend',
                     text: 'Blog Post Management'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Highlight blog post'
                 }],
         }]
@@ -259,12 +278,12 @@ const projects = [
         name: "Fixolla",
         tagLine:
             "Online mobile and laptop repair in Bangalore.",
-        // coverImage: "/fixolla.jpg",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Ffixolla.JPG?alt=media",
         type: "it",
         urlSlug: "fixolla-india-simplifying-lives-repair-mobile-tablet-laptop-online",
         id: 7,
         website: '//fixolla.com',
-        technologies: ['Java', 'Laravel'],
+        technologies: ['Java', 'Laravel', 'Android Studio'],
         contributionLevels: {
             AndroidApp: 20,
             Design: 5,
@@ -281,29 +300,29 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Android App'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'API'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Protection of User Data'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Tracking the rivals'
                 }],
         }]
     },
     {
-        name: "RFID Limitor",
+        name: "RFID Limiter",
         tagLine: "An Arduino UNO based project for limiting the RFID Scans.",
         type: "ee",
-        urlSlug: "rfid-limitor-arduino-uno-limiting-scans",
+        urlSlug: "rfid-limiter-arduino-uno-limiting-scans",
         id: 8,
         technologies: ['Arduino'],
         contributionLevels: {
@@ -316,24 +335,24 @@ const projects = [
             titleIcon: 'receipt',
             paragraphs: [
                 {
-                    text: 'Usually RFID cards are used for authorizing by knowing the identity of the carrier. I built the device with option to limit the number of authoriations to individual card holder. After (n) number of scans the device revokes the access unless re-authorized by system head.'
+                    text: 'Usually RFID cards are used for authorizing by knowing the identity of the carrier. I built the device with option to limit the number of authorizations to individual card holder. After (n) number of scans the device revokes the access unless re-authorized by system head.'
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Count card scans'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Warn on last scan'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Visual notification on false card or revoked card'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Log scan history with timestamp to SD card'
                 }],
         }]
@@ -360,17 +379,17 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'CSV Export of raw data for further analysis on Excel '
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'View the daily wash load without any export'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'GUI app in C#'
                 }],
         }]
@@ -393,22 +412,22 @@ const projects = [
             titleIcon: 'receipt',
             paragraphs: [
                 {
-                    text: 'A novel system has been devised to eliminate power theft by automatic release of high voltage pulse in the transmission line in response to the command received by the remote termination unit (high voltage source) from arduino in the event of theft being detected. Due to high voltage pulse in the transmission lines, the pilferer’s appliances drawing powers illegaly by way of tapping get impaired. This operation is transient (for 1-5 seconds) and during this time the supply of voltage for the normal consumers is kept suspended. However, in case of emergency, i.e., when the normal supply cannot be disturbed, the bypass mode is activated so that consumers continue to get un-interrupted power supply, and during this period the process of theft elimination is kept suspended. The actual working of this novel system has been demonstrated by simulating the process in Proteus autocad 8.6. The process thus developed is effective and reliable.'
+                    text: 'A novel system has been devised to eliminate power theft by automatic release of high voltage pulse in the transmission line in response to the command received by the remote termination unit (high voltage source) from arduino in the event of theft being detected. Due to high voltage pulse in the transmission lines, the pilferer’s appliances drawing powers illegally by way of tapping get impaired. This operation is transient (for 1-5 seconds) and during this time the supply of voltage for the normal consumers is kept suspended. However, in case of emergency, i.e., when the normal supply cannot be disturbed, the bypass mode is activated so that consumers continue to get un-interrupted power supply, and during this period the process of theft elimination is kept suspended. The actual working of this novel system has been demonstrated by simulating the process in Proteus 8.6. The process thus developed is effective and reliable.'
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Visual Indication when theft is live'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Eliminator Initialization'
                 }, {
-                    category: 'Simulation',
-                    text: 'Modeling ans simulation on Proteus'
+                    badge: 'Simulation',
+                    text: 'Modeling and simulation on Proteus'
                 }],
         }]
     },
@@ -436,30 +455,31 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Simulation',
-                    text: 'Modeling ans simulation on Proteus'
+                    badge: 'Simulation',
+                    text: 'Modeling and simulation on Proteus'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Visual Indication of device health'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Raw data analysis by PHP'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Realtime serial data transfer by bluetooth module'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Windows console app to analyse raw SD Card data'
                 }],
         }]
     },
     {
         name: "Legal Remit Nepal",
-        tagLine: "Remitance website for money transfers.",
+        tagLine: "Remittance website for money transfers.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Flegal-remit-nepal.JPG?alt=media",
         type: "it",
         urlSlug: "legal-remit-nepal-transfer-management",
         id: 12,
@@ -482,33 +502,345 @@ const projects = [
                 }
             ],
         }, {
-            title: 'My Task',
+            title: 'My Highlighted Tasks',
             titleIcon: 'code',
             lists:
                 [{
-                    category: 'Feature',
-                    text: 'Transcation Management'
+                    badge: 'Feature',
+                    text: 'Transaction Management'
                 }, {
-                    category: 'Security',
+                    badge: 'Security',
                     text: 'Middleware Protection for admin, staff and user accounts'
                 }, {
-                    category: 'Marketing',
+                    badge: 'Marketing',
                     text: 'Web Analytics'
                 }, {
-                    category: 'Feature',
-                    text: 'Banks transcation management'
+                    badge: 'Feature',
+                    text: 'Banks transaction management'
                 }, {
-                    category: 'Development',
+                    badge: 'Development',
                     text: 'Usage tracking'
                 }, {
-                    category: 'Feature',
+                    badge: 'Feature',
                     text: 'Bank staff account'
                 }, {
-                    category: 'Hosting',
-                    text: 'AWS'
+                    badge: 'Hosting',
+                    text: 'AWS - Elasticbeanstalk, Cloudwatch, RDS and EC2 Cron jobs'
+                }, {
+                    badge: 'Feature',
+                    text: 'Banks API integration for verified money transfers to deposition.'
+                }, {
+                    badge: 'Feature',
+                    text: 'Poli Payments Integration'
+                }],
+        }, {
+            title: 'Team',
+            titleIcon: 'people',
+            lists:
+                [{
+                    badge: 2,
+                    text: 'UI/UX'
+                }, {
+                    badge: 1,
+                    text: 'Backend'
                 }],
         }]
-    },
+    }, {
+        name: "Limbu Dictionary",
+        tagLine:
+            "A FREE online dictionary to quickly search Limbu meanings in English and Nepali words.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Flimbu-dictionary.jpg?alt=media",
+        type: "it",
+        urlSlug: "limbu-english-nepali-dictionary-free-online",
+        id: 13,
+        website: '//apps.apple.com/us/app/limbu-dictionary/id1491522563',
+        technologies: ['React Native'],
+        contributionLevels: {
+            'Native Framework': 60,
+            Design: 25,
+            Teammates: 15,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'Wordpress provides API service. The app uses it to list post, search them and view details. Also there are some static supporting pages.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Feature',
+                    text: 'Search using API'
+                }, {
+                    badge: 'Feature',
+                    text: 'Detail page with Limbu font'
+                }, {
+                    badge: 'Publishing',
+                    text: 'Deploying to App Store'
+                }],
+        }, {
+            title: 'Team',
+            titleIcon: 'people',
+            lists:
+                [{
+                    badge: 1,
+                    text: 'UI/UX'
+                }, {
+                    badge: 1,
+                    text: 'Backend'
+                }],
+        }]
+    }, {
+        name: "Indigo Ink",
+        tagLine:
+            "Book gallery page for book publisher with events management.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Findigo-ink.jpg?alt=media",
+        type: "it",
+        urlSlug: "indigo-ink-book-publisher-nepal",
+        id: 14,
+        website: '//indigoink.com.np',
+        technologies: ['October CMS'],
+        contributionLevels: {
+            Backend: 50,
+            Teammates: 50,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'Indigo Ink book publisher comes online with book gallery. They also have system to publish the events they regularly organize.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Feature',
+                    text: 'Book Gallery'
+                }, {
+                    badge: 'Feature',
+                    text: 'Events Management'
+                }, {
+                    badge: 'Publishing',
+                    text: 'Hosting on C-Panel'
+                }, {
+                    badge: 'Marketing',
+                    text: 'Online Enquiries'
+                }],
+        }, {
+            title: 'Team',
+            titleIcon: 'people',
+            lists:
+                [{
+                    badge: 1,
+                    text: 'UI/UX'
+                }, {
+                    badge: 1,
+                    text: 'Backend'
+                }],
+        }]
+    }, {
+        name: "Employee Records",
+        tagLine: "Vuejs based employee directory.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Femployee-records.jpg?alt=media",
+        type: "it",
+        urlSlug: "employee-records-directory-laravel-vuejs",
+        id: 15,
+        technologies: ['Vuejs', 'Laravel'],
+        contributionLevels: {
+            Design: 5,
+            Backend: 90,
+            Frontend: 70,
+            Teammates: 15,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'Provides easy and fast search of employees in several departments within company.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Database',
+                    text: 'Database design'
+                }, {
+                    badge: 'Feature',
+                    text: 'Vuejs filter and vue-router management.'
+                }, {
+                    badge: 'Storage',
+                    text: 'Vuex for persisting the Laravel\'s session and login check of user has logged-in by checking keep me signed-in.'
+                }],
+        }, {
+            title: 'Team',
+            titleIcon: 'people',
+            lists:
+                [{
+                    badge: 2,
+                    text: 'UI/UX'
+                }, {
+                    badge: 1,
+                    text: 'Backend'
+                }],
+        }]
+    }, {
+        name: "Amour Production House",
+        tagLine: "Production house portfolio.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Famour-production.jpg?alt=media",
+        type: "it",
+        urlSlug: "amour-production-house-october-cms",
+        id: 16,
+        website: '//amourproduction.in',
+        technologies: ['October CMS'],
+        contributionLevels: {
+            Design: 100,
+            Frontend: 100,
+            Backend: 100,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'Website built for Production house to highlight their portfolio. Dynamic frontend allows admin to set banners, website contents, videos. The site also includes restricted area where the visitor has to enter access code to proceed.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Database',
+                    text: 'Database design'
+                }, {
+                    badge: 'Storage',
+                    text: 'Image and videos gallery.'
+                }, {
+                    badge: 'Feature',
+                    text: 'Backend for managing enquiries with soft delete and all website contents.'
+                }],
+        }]
+    }, {
+        name: "ReachOn",
+        tagLine: "Digital Education For All",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Freachon.jpg?alt=media",
+        type: "it",
+        urlSlug: "reachon-digital-education-socket-vuejs-nepal",
+        id: 17,
+        technologies: ['Laravel', 'Socket', 'Vuejs'],
+        contributionLevels: {
+            Design: 20,
+            Backend: 30,
+            Server: 80,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'ReachOn is the digital education platform with the vision to create education system where every student has the same opportunities. Education is all about accessibility and equality but different student left their class with different level of understanding and face many problems with current education system.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Feature',
+                    text: 'Backend panel to check answer sheet'
+                }, {
+                    badge: 'Feature',
+                    text: 'Laravel Echo for notification'
+                }, {
+                    badge: 'Feature',
+                    text: 'Self hosted pusher server'
+                }],
+        }]
+    }, {
+        name: "Uno",
+        tagLine: "Discounts, Coupons and Entertainment for every age group anywhere.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Funo.jpg?alt=media",
+        type: "it",
+        urlSlug: "uno-card-nepal-discounts-coupons",
+        id: 18,
+        website: '//uno.com.np',
+        technologies: ['CodeIgniter', 'Vuejs'],
+        contributionLevels: {
+            Design: 10,
+            API: 60,
+            Backend: 30,
+            Merchant: 20,
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'Uno is a comprehensive online business directory targeted for extra discount. It provides information to cater to the immediate, impulsive and urgent requirement of customers for companies, products, and services.'
+                },
+                {
+                    text: 'Uno offers a yearly subscription to interested users for a flat discount on 100+ locations across Nepal. Freely registered user can take benefit of points collection and redeem it as cash discount.'
+                },
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Feature',
+                    text: 'Bulk registration for card providers'
+                }, {
+                    badge: 'Feature',
+                    text: 'User reporting system with issue and renewal'
+                }],
+        }]
+    }, {
+        name: "Short Vids",
+        tagLine: "Short entertaining videos to make your day.",
+        coverImage: "https://firebasestorage.googleapis.com/v0/b/x8-red-freedom-c.appspot.com/o/project%2Fshort-vids.jpg?alt=media",
+        type: "it",
+        urlSlug: "short-vids-videos-make-your-day",
+        id: 19,
+        technologies: ['Laravel', 'Vuejs', 'AWS'],
+        contributionLevels: {
+            Design: 40,
+            API: 100,
+            Backend: 100
+        },
+        details: [{
+            title: 'Overview',
+            titleIcon: 'assignment',
+            paragraphs: [
+                {
+                    text: 'This app is similar to popular short videos sharing apps. We have optimized the backend for AWS with content caching for faster operations.'
+                }
+            ],
+        }, {
+            title: 'My Highlighted Tasks',
+            titleIcon: 'code',
+            lists:
+                [{
+                    badge: 'Feature',
+                    text: 'Video sharing as public, followers or private.'
+                }, {
+                    badge: 'Security',
+                    text: 'Restriction on content viewing'
+                }, {
+                    badge: 'Hosting',
+                    text: 'AWS - Elasticbeanstalk, Cloudwatch and RDS'
+                }],
+        }]
+    }
 ];
 
 export default {
